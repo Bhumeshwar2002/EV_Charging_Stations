@@ -11,7 +11,12 @@ const { verifyToken } = require('./middleware/auth');
 const app = express();
 
 // Middleware
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+  origin: 'https://ev-charging-stations-at68hvqol-bhuviiis-projects.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
 app.use(helmet());
 app.use(morgan('dev'));
 app.use(express.json());

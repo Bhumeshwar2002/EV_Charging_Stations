@@ -7,11 +7,8 @@
     import axios from 'axios'
     import router from '../router'
 
-    // const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api'
-
-    // const API_URL = (import.meta.env && import.meta.env.VITE_API_URL) || 'http://localhost:3000/api';
-    // const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
-    const API_URL = process.env.VUE_APP_API_URL || 'http://localhost:3000/api'
+    // const API_URL = process.env.VUE_APP_API_URL || 'http://localhost:3000/api'
+    const API_URL = 'https://ev-charging-stations-1-veca.onrender.com/api';
 
     export const useAuthStore = defineStore('auth', {
     state: () => ({

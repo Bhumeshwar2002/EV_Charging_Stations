@@ -7,8 +7,8 @@ import { defineStore } from 'pinia'
 import axios from 'axios'
 import { useAuthStore } from './auth'
 
-const API_URL = process.env.VUE_APP_API_URL || 'http://localhost:3000/api'
-
+// const API_URL = process.env.VUE_APP_API_URL || 'http://localhost:3000/api'
+const API_URL = 'https://ev-charging-stations-1-veca.onrender.com/api';
 export const useStationsStore = defineStore('stations', {
   state: () => ({
     stations: [],
