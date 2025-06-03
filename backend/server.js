@@ -25,6 +25,8 @@ mongoose.connect(process.env.MONGODB_URI)
 app.use('/api/auth', authRoutes);
 app.use('/api/stations', verifyToken, stationRoutes);
 
+
+
 // Health check
 app.get('/api/health', (req, res) => {
   res.status(200).json({ status: 'OK' });
@@ -36,6 +38,9 @@ app.use((err, req, res, next) => {
   res.status(500).json({ message: 'Something went wrong!' });
 });
 
+app.get('/', (req, res) => {
+  res.send('API is running successfully');
+});
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
