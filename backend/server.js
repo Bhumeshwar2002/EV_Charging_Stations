@@ -5,7 +5,7 @@ const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const authRoutes = require('./routes/auth');
-const stationRoutes = require('./routes/chargingStation');
+const stationRoutes = require('./routes/ChargingStation');
 const { verifyToken } = require('./middleware/auth');
 
 const app = express();
